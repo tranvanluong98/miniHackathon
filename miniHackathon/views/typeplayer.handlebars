@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" method="POST" id="postname">
+            <input type="text" name="player1" id="player1" placeholder="  Player 1...">
+            <input type="text" name="player2" id="player2" placeholder="  Player 2...">
+            <input type="text" name="player3" id="player3" placeholder="  Player 3...">
+            <input type="text" name="player4" id="player4" placeholder="  Player 4...">
+            <div class="form-row text-center">
+                <div class="col-12">
+                    <button type="submit" class="btn btn-lg" style="background-color: #BF1363;color:#fff">CREATE NEW GAME</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+
+    $('#postname').on('submit', (event) => {
+
+        event.preventDefault();
+        $.ajax({
+            url: "/add/player",
+            type: 'POST',
+            data: $('#postname').serialize(),
+            success: (body) => {
+                window.location.href = "/games"
+                console.log(body)
+            }
+
+        })
+    })
+</script>
+
+</html>
