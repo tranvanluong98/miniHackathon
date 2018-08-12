@@ -18,131 +18,193 @@
 
 <body>
     <div class="container">
-    <form action="" id="table-score">
+        <form action="" id="table-score">
 
-        <table class="table table-striped ">
-            <thead>
-                <tr>
-                    <th scope="col"></th>
-                    <th scope="col">{{this.name1}}</th>
-                    <th scope="col">{{this.name2}}</th>
-                    <th scope="col">{{this.name3}}</th>
-                    <th scope="col">{{this.name4}}</th>
-                </tr>
-            </thead>
-            <thead>
-                <tr style="background-color:#BF1363;color: #fff;">
-                    <th scope="col"> SUM OF SCORE </th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody class="add-row">
-                <tr>
-                    <th scope="row">Round 1</th>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Round 2</th>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Round 3</th>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">Round 4</th>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Type number ... ">
-                    </td>
-                </tr>
+            <table class="table table-striped ">
+                <thead>
+                    <tr>
+                        <th scope="col">Player</th>
+                        <th scope="col">{{this.name1}}</th>
+                        <th scope="col">{{this.name2}}</th>
+                        <th scope="col">{{this.name3}}</th>
+                        <th scope="col">{{this.name4}}</th>
+                    </tr>
+                </thead>
+                <thead>
+                    <tr style="background-color:#BF1363;color: #fff;">
+                        <th scope="col"> SUM OF SCORE </th>
+                        <th scope="col" id="allScorePlayer1"></th>
+                        <th scope="col" id="allScorePlayer2"></th>
+                        <th scope="col" id="allScorePlayer3"></th>
+                        <th scope="col" id="allScorePlayer4"></th>
+                    </tr>
+                </thead>
+                <tbody class="add-row">
+                    <tr>
+                        <th scope="row">Round 1</th>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer1" name="scorePlayer1[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer2" name="scorePlayer2[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer3" name="scorePlayer3[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer4" name="scorePlayer4[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Round 2</th>
+                        <td>
+                            <input value="" placeholder="Type number ... " class="player1" name="scorePlayer1[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer2" name="scorePlayer2[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer3" name="scorePlayer3[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer4" name="scorePlayer4[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Round 3</th>
+                        <td>
+                            <input value="" placeholder="Type number ... " class="player1" name="scorePlayer1[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer2" name="scorePlayer2[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer3" name="scorePlayer3[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer4" name="scorePlayer4[]">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Round 4</th>
+                        <td>
+                            <input value="" placeholder="Type number ... " class="player1" name="scorePlayer1[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer2" name="scorePlayer2[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer3" name="scorePlayer3[]">
+                        </td>
+                        <td>
+                            <input value="" placeholder="Type number ... " id="scoreplayer4" name="scorePlayer4[]">
+                        </td>
+                    </tr>
 
-            </tbody>
-        </table>
-        <div class="form-row text-center">
-            <div class="col-12">
-        <button id="add-round" type="submit" class="btn btn-lg">ADD ROUND </button>
-        </div>
-        </div>
-    </form>
+                </tbody>
+            </table>
+            <div class="form-row text-center">
+                <div class="col-12">
+                    <button id="add-round" type="submit" class="btn btn-lg">ADD ROUND </button>
+                </div>
+            </div>
+        </form>
+
     </div>
 
     <script>
         var countRound = 4;
         $("#table-score").on("submit", (e) => {
-            countRound += 1;
+
             e.preventDefault();
-            $(".add-row").append(`<tr>
+
+            $(function () {
+
+                /* $.ajax({
+                     success: (addround) => {
+                         console.log("OK")
+     
+                         console.log(addround)
+                     },
+                     error: (err) => {
+                         console.err(err)
+                     }
+                 })*/
+                // }) 
+
+
+                var allScorePlayer1 = 0;
+                var allScorePlayer2 = 0;
+                var allScorePlayer3 = 0;
+                var allScorePlayer4 = 0;
+
+                $('#add-round').click(function () {
+                    countRound += 1;
+                    $(".add-row").append(`<tr>
                 <th scope="row">Round ${countRound}</th>
                 <td>
-                    <input type="text" placeholder="Type number ... ">
+                    <input value="" placeholder="Type number ... " class="player1" name="scorePlayer1[]" >
                 </td>
                 <td>
-                    <input type="text" placeholder="Type number ... ">
+                    <input value="" placeholder="Type number ... " id="scoreplayer2" name="scorePlayer2[]" >
                 </td>
                 <td>
-                    <input type="text" placeholder="Type number ... ">
+                    <input value="" placeholder="Type number ... " id="scoreplayer3" name="scorePlayer3[]">
                 </td>
                 <td>
-                    <input type="text" placeholder="Type number ... ">
+                    <input value="" placeholder="Type number ... " id="scoreplayer4" name="scorePlayer4[]">
                 </td>
             </tr>`)
-            console.log("OKK")
-            /* $.ajax({
-                 success: (addround) => {
-                     console.log("OK")
- 
-                     console.log(addround)
-                 },
-                 error: (err) => {
-                     console.err(err)
-                 }
-             })*/
+                    console.log("OKK")
+                })
+                var scoreplayer1 = [];
+                var scoreplayer2 = [];
+                var scoreplayer3 = [];
+                var scoreplayer4 = [];
+
+                $('input[name^=scorePlayer1]').each(function () {
+                    scoreplayer1.push($(this).val());
+                });
+                for (let i = 0; i < countRound; i++) {
+                    allScorePlayer1 += parseInt(scoreplayer1[i]);
+                }
+                $('input[name^=scorePlayer2]').each(function () {
+                    scoreplayer2.push($(this).val());
+                });
+                for (let i = 0; i < countRound; i++) {
+                    allScorePlayer2 += parseInt(scoreplayer2[i]);
+                }
+                $('input[name^=scorePlayer3]').each(function () {
+                    scoreplayer3.push($(this).val());
+                });
+                for (let i = 0; i < countRound; i++) {
+                    allScorePlayer3 += parseInt(scoreplayer3[i]);
+                }
+                $('input[name^=scorePlayer4]').each(function () {
+                    scoreplayer4.push($(this).val());
+                });
+                for (let i = 0; i < countRound; i++) {
+                    allScorePlayer4 += parseInt(scoreplayer4[i]);
+                }
+
+
+                document.getElementById("allScorePlayer1").innerHTML = allScorePlayer1;
+                document.getElementById("allScorePlayer2").innerHTML = allScorePlayer2;
+                document.getElementById("allScorePlayer3").innerHTML = allScorePlayer3;
+                document.getElementById("allScorePlayer4").innerHTML = allScorePlayer4;
+                console.log(scoreplayer1);
+                console.log(typeof scoreplayer1)
+                console.log(allScorePlayer1)
+                console.log(allScorePlayer2)
+                console.log(allScorePlayer3)
+                console.log(allScorePlayer4)
+                return false;
+            });
+
+
+
         })
+
 
     </script>
 </body>

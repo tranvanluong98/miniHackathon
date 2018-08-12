@@ -33,7 +33,7 @@
 
         event.preventDefault();
         $.ajax({
-            url: "/add/player",
+            url: "/api/player",
             type: 'POST',
             data: $('#postname').serialize(),
             success: (body) => {

@@ -7,6 +7,9 @@ let Playergame = new Schema({
     name2: {type:String , required:true},
     name3: {type:String , required:true},
     name4: {type:String , required:true},
-    score :[Number]
+    scorePlayer1: {type:Number }, 
+    scorePlayer2: {type:Number }, 
+    scorePlayer3: {type:Number }, 
+    scorePlayer4: {type:Number }
 })
 module.exports = mongoose.model("Playergame",Playergame)
